@@ -15,6 +15,8 @@ public class Main {
         System.out.println("\n**** Welcome to Guess That Number! ****\n");
 
         while(keepGuesing){
+
+            // try-catch block to catch inputs that would break our code (i.e. anything not an int)
             try {
                 System.out.println("\nPlease enter a number between 1 and 100: ");
                 numberGuessed = input.nextInt();
@@ -25,6 +27,7 @@ public class Main {
                 continue;
             }
 
+            // guessing logic
             if(numberGuessed < 1 || numberGuessed > 100){
                 System.out.println("A number between 1 and 100, please!");
             }
